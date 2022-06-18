@@ -65,30 +65,29 @@ class InputKeyPrompt extends Base {
     }
 
     if (this.state !== undefined) {
-        const Reset = '\x1b[0m';
-        const Bright = '\x1b[1m';
-        const Blue = '\x1b[34m';
-        const Dim = '\x1b[2m';
-        const cliWidth = process.stdout.columns;
-        const extraSpace =
-          cliWidth - '            ########################                       '.length;
-        const left = Math.floor(extraSpace / 6);
-  
-        const string = '             ########################              ';
-        let newString = '';
-        let light = false;
-        for (let j = 0; j < string.length; j++) {
-          if (light === true) {
-            newString += Bright + Blue + string[j] + Reset;
-          } else {
-            newString += Blue + string[j] + Reset;
-          }
-          light = !light;
+      const Reset = '\x1b[0m';
+      const Bright = '\x1b[1m';
+      const Blue = '\x1b[34m';
+      const Dim = '\x1b[2m';
+      const cliWidth = process.stdout.columns;
+      const extraSpace =
+        cliWidth - '            ########################                       '.length;
+      const left = Math.floor(extraSpace / 6);
+
+      const string = '             ########################              ';
+      let newString = '';
+      let light = false;
+      for (let j = 0; j < string.length; j++) {
+        if (light === true) {
+          newString += Bright + Blue + string[j] + Reset;
+        } else {
+          newString += Blue + string[j] + Reset;
         }
-        newString += Dim;
-        message = ' '.repeat(left) + newString + message;
+        light = !light;
       }
- 
+      newString += Dim;
+      message = ' '.repeat(left) + newString + message;
+    }
 
     this.screen.render(message, bottomContent);
   }

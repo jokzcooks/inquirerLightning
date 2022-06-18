@@ -1,4 +1,5 @@
 {
+  "name": "@jokzyz/inquirer.js",
   "private": true,
   "devDependencies": {
     "@babel/core": "^7.17.9",
