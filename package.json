@@ -21,7 +21,7 @@
   "scripts": {
     "bootstrap": "lerna bootstrap --no-ci",
     "pretest": "eslint .",
-    "test": "jest --coverage && lerna exec npm test --scope inquirer"
+    "test": "jest --coverage && lerna exec npm test --scope @jokzyz/inquirer"
   },
   "repository": {
     "type": "git",
