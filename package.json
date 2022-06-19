@@ -22,6 +22,7 @@
   "scripts": {
     "bootstrap": "lerna bootstrap --no-ci",
     "pretest": "eslint .",
+    "publish2": "lerna publish --skip-npm && lerna run publish-npm",
     "publish": "lerna run tsc && lerna publish",
     "test": "jest --coverage && lerna exec npm test --scope @jokzyz/inquirer"
   },

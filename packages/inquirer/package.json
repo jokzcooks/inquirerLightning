@@ -31,7 +31,8 @@
   },
   "scripts": {
     "test": "nyc mocha test/**/* -r ./test/before",
-    "posttest": "nyc report --reporter=text-lcov > ../../coverage/nyc-report.lcov"
+    "posttest": "nyc report --reporter=text-lcov > ../../coverage/nyc-report.lcov",
+    "publish-npm": "npm publish --access public"
   },
   "repository": "SBoudrias/Inquirer.js",
   "license": "MIT",
@@ -52,5 +53,8 @@
     "through": "^2.3.6",
     "wrap-ansi": "^7.0.0"
   },
-  "gitHead": "2ea85d19f3ffba09558b79ba900885154434c762"
+  "gitHead": "2ea85d19f3ffba09558b79ba900885154434c762",
+  "publishConfig": {
+    "access": "public"
+  }
 }
